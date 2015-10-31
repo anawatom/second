@@ -1,0 +1,7 @@
+31/10/2015
+
+- Add login module
+	- http://www.yiiframework.com/doc-2.0/guide-security-authentication.html
+	- https://github.com/amnah/yii2-user 
+	- http://www.bsourcecode.com/yiiframework2/yii-2-user-login-from-database/
+- 
