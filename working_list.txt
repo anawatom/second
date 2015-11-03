@@ -1,7 +1,16 @@
 31/10/2015
 
-- Add login module
+VPN
+User 		: dpe
+Password 	: dpe@dmin
+
+- How to check date format in oracle databse 
+	- Used 'select * from nls_session_parameters;' query.
+- Add login module *** Composer update currently using amnah/yii2-user extendsions.
 	- http://www.yiiframework.com/doc-2.0/guide-security-authentication.html
 	- https://github.com/amnah/yii2-user 
 	- http://www.bsourcecode.com/yiiframework2/yii-2-user-login-from-database/
-- 
+	- https://github.com/dektrium/yii2-user <<< Interesting
+
+
+C:\Users\AnawatOnmee\AppData\Roaming\Composer\vendor

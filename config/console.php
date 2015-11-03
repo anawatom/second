@@ -14,7 +14,10 @@ return [
         'gii' => 'yii\gii\Module',
         'gridview' =>  [
             'class' => '\kartik\grid\Module'
-        ]
+        ],
+        'user' => [
+            'class' => 'app\modules\user\Module',
+        ],
     ],
     'components' => [
         'cache' => [

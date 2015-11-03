@@ -22,7 +22,8 @@ $config = [
             'errorAction' => 'site/error',
         ],
         'user' => [
-            'class' => 'amnah\yii2\user\components\User',
+            // 'class' => 'amnah\yii2\user\components\User',
+            'class' => 'app\modules\user\components\User',
         ],
         'mailer' => [
             'class' => 'yii\swiftmailer\Mailer',
@@ -109,7 +110,7 @@ $config = [
             ],
         ] ,
         'user' => [
-            'class' => 'amnah\yii2\user\Module',
+            'class' => 'app\modules\user\Module',
         ],
     ] ,
     'as AccessBehavior' => [
