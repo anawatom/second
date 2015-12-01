@@ -20,7 +20,8 @@ class AppAsset extends AssetBundle
     public $css = [
         'css/site.css',
         'css/jquery-confirm.css',
-        'css/pnotify.custom.min.css',        
+        'css/pnotify.custom.min.css',
+        'css/custom.css'
     ];
     public $js = [
         'js/main.js' ,

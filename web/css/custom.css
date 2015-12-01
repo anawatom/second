@@ -1,0 +1,15 @@
+/*
+* This file is used to override the existing styles
+*
+* @Note: 
+*	This file is always in the last position. 
+*	So it is unnecessary to add '!important' to the style
+*/
+
+/* 
+ Override AdminLTE styles */
+.sidebar-menu, .main-sidebar .user-panel, .sidebar-menu>li.header {
+    white-space: normal;
+}
+/*
+--- */
