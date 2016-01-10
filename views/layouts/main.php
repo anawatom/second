@@ -7,6 +7,7 @@ use yii\helpers\Html;
 $this->title = Yii::$app->name;
 
 dmstr\web\AdminLteAsset::register($this);
+$directoryAsset = Yii::$app->assetManager->getPublishedUrl('@vendor/almasaeed2010/adminlte/dist');
 
 if (class_exists('backend\assets\AppAsset')) {
     backend\assets\AppAsset::register($this);
@@ -14,7 +15,6 @@ if (class_exists('backend\assets\AppAsset')) {
     app\assets\AppAsset::register($this);
 }
 
-$directoryAsset = Yii::$app->assetManager->getPublishedUrl('@vendor/almasaeed2010/adminlte/dist');
 ?>
 <?php $this->beginPage() ?>
 <!DOCTYPE html>
