@@ -4,7 +4,7 @@ namespace app\controllers;
 
 use Yii;
 use app\models\ClnBoundaryInj;
-use app\models\ClnBoundaryInjSearch;
+use app\modelsClnBoundaryInjSearch;
 use yii\web\Controller;
 use yii\web\NotFoundHttpException;
 use yii\filters\VerbFilter;
@@ -12,7 +12,7 @@ use yii\filters\VerbFilter;
 /**
  * ClnBoundaryInjController implements the CRUD actions for ClnBoundaryInj model.
  */
-class ClnboundaryinjController extends Controller
+class ClnBoundaryInjController extends Controller
 {
     public function behaviors()
     {
@@ -32,7 +32,7 @@ class ClnboundaryinjController extends Controller
      */
     public function actionIndex()
     {
-        $searchModel = new ClnBoundaryInjSearch();
+        $searchModel = new modelsClnBoundaryInjSearch();
         $dataProvider = $searchModel->search(Yii::$app->request->queryParams);
 
         return $this->render('index', [

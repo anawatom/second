@@ -3,16 +3,16 @@
 namespace app\controllers;
 
 use Yii;
-use app\models\ClnSport;
-use app\models\ClnSportSearch;
+use app\models\ClnDiagnose;
+use app\models\ClnDiagnoseSearch;
 use yii\web\Controller;
 use yii\web\NotFoundHttpException;
 use yii\filters\VerbFilter;
 
 /**
- * ClnSportController implements the CRUD actions for ClnSport model.
+ * ClnDiagnoseController implements the CRUD actions for ClnDiagnose model.
  */
-class ClnSportController extends Controller
+class ClnDiagnoseController extends Controller
 {
     public function behaviors()
     {
@@ -27,12 +27,12 @@ class ClnSportController extends Controller
     }
 
     /**
-     * Lists all ClnSport models.
+     * Lists all ClnDiagnose models.
      * @return mixed
      */
     public function actionIndex()
     {
-        $searchModel = new ClnSportSearch();
+        $searchModel = new ClnDiagnoseSearch();
         $dataProvider = $searchModel->search(Yii::$app->request->queryParams);
 
         return $this->render('index', [
@@ -42,7 +42,7 @@ class ClnSportController extends Controller
     }
 
     /**
-     * Displays a single ClnSport model.
+     * Displays a single ClnDiagnose model.
      * @param integer $id
      * @return mixed
      */
@@ -54,16 +54,16 @@ class ClnSportController extends Controller
     }
 
     /**
-     * Creates a new ClnSport model.
+     * Creates a new ClnDiagnose model.
      * If creation is successful, the browser will be redirected to the 'view' page.
      * @return mixed
      */
     public function actionCreate()
     {
-        $model = new ClnSport();
+        $model = new ClnDiagnose();
 
         if ($model->load(Yii::$app->request->post()) && $model->save()) {
-            return $this->redirect(['view', 'id' => $model->SPORT_GEN_NO]);
+            return $this->redirect(['view', 'id' => $model->DIAGNOSE_GEN_NO]);
         } else {
             return $this->render('create', [
                 'model' => $model,
@@ -72,7 +72,7 @@ class ClnSportController extends Controller
     }
 
     /**
-     * Updates an existing ClnSport model.
+     * Updates an existing ClnDiagnose model.
      * If update is successful, the browser will be redirected to the 'view' page.
      * @param integer $id
      * @return mixed
@@ -82,7 +82,7 @@ class ClnSportController extends Controller
         $model = $this->findModel($id);
 
         if ($model->load(Yii::$app->request->post()) && $model->save()) {
-            return $this->redirect(['view', 'id' => $model->SPORT_GEN_NO]);
+            return $this->redirect(['view', 'id' => $model->DIAGNOSE_GEN_NO]);
         } else {
             return $this->render('update', [
                 'model' => $model,
@@ -91,7 +91,7 @@ class ClnSportController extends Controller
     }
 
     /**
-     * Deletes an existing ClnSport model.
+     * Deletes an existing ClnDiagnose model.
      * If deletion is successful, the browser will be redirected to the 'index' page.
      * @param integer $id
      * @return mixed
@@ -104,15 +104,15 @@ class ClnSportController extends Controller
     }
 
     /**
-     * Finds the ClnSport model based on its primary key value.
+     * Finds the ClnDiagnose model based on its primary key value.
      * If the model is not found, a 404 HTTP exception will be thrown.
      * @param integer $id
-     * @return ClnSport the loaded model
+     * @return ClnDiagnose the loaded model
      * @throws NotFoundHttpException if the model cannot be found
      */
     protected function findModel($id)
     {
-        if (($model = ClnSport::findOne($id)) !== null) {
+        if (($model = ClnDiagnose::findOne($id)) !== null) {
             return $model;
         } else {
             throw new NotFoundHttpException('The requested page does not exist.');

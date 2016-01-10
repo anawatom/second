@@ -1,8 +1,10 @@
 31/10/2015
 
 VPN
-User 		: dpe
-Password 	: dpe@dmin
+User 			: dpe
+Password 		: dpe@dmin
+Original Web 	: http://61.90.161.156:38080/clinicWeb/
+
 
 - How to check date format in oracle databse 
 	- Used 'select * from nls_session_parameters;' query.
@@ -14,3 +16,32 @@ Password 	: dpe@dmin
 
 
 C:\Users\AnawatOnmee\AppData\Roaming\Composer\vendor
+
+--------------------------------------------------------------------------
+Theme documentation
+https://almsaeedstudio.com/themes/AdminLTE/documentation/index.html
+
+--------------------------------------------------------------------------
+Login view is in app/modules/user/views/default/login.php
+
+--------------------------------------------------------------------------
+Summary Work
+ตารางรหัส
+	- CLN0I010	บันทึกชนิดกีฬา
+	- CLN0I020	บันทึกบริเวณที่บาดเจ็บ
+	- CLN0I030	บันทีกสาเหตุการบาดเจ็บ
+	- CLN0I040	บันทึกวิธีการรักษา
+	- CLN0I050	บันทึกคำนำหน้านาม
+	- CLN0I060	บันทึกเวลามาตรฐานการให้บริการ
+บันทึก
+	- CLN1I010	บันทึกระเบียนผู้ป่วย
+	- CLN1I020	บันทึกการบาดเจ็บ
+	- CLN1I030	บันทึกกิจกรรมย่อย
+รายงาน
+	- CLN1R010	รายงานเวชระเบียนคนไข้
+	- CLN1R020	รายงานผู้ใช้บริการและระยะเวลาให้บริการ
+	- CLN1R030	รายงานประจำเดือน
+	- CLN1R040	รายงานกราฟต่างๆ
+	- CLN1R050	พิมพ์รายงานสรุปจำนวนผู้ใช้บริการเปรียบเทียบเวลามาตรฐาน
+	- CLN1R060	รายงานประวัติการได้รับบาดเจ็บ/แพ้ยา
+	- CLN1R070	รายงานทะเบียนประวัติคนไข้

@@ -5,18 +5,14 @@ namespace app\controllers;
 use Yii;
 use app\models\ClnRegister;
 use app\models\ClnRegisterSearch;
-use app\models\ClnTitle;
 use yii\web\Controller;
 use yii\web\NotFoundHttpException;
 use yii\filters\VerbFilter;
-use yii\helpers\ArrayHelper;
-use yii\helpers\Json;
-use yii\web\JsonParser;
 
 /**
  * ClnRegisterController implements the CRUD actions for ClnRegister model.
  */
-class ClnregisterController extends Controller
+class ClnRegisterController extends Controller
 {
     public function behaviors()
     {
@@ -30,18 +26,6 @@ class ClnregisterController extends Controller
         ];
     }
 
-    
-    /**
-     * Get next Reg No
-     * [NuttaV][20150720]
-     */
-    public function actionGetNextRegNo(){
-            //if (Yii::app()->request->isAjaxRequest) {
-            //    header('Content-type: application/json');
-                $result['SHOW_REG_NO'] = 'ddddddd' ;               
-                echo Json::encode($result) ;
-    }
-    
     /**
      * Lists all ClnRegister models.
      * @return mixed
@@ -50,15 +34,10 @@ class ClnregisterController extends Controller
     {
         $searchModel = new ClnRegisterSearch();
         $dataProvider = $searchModel->search(Yii::$app->request->queryParams);
-        
-        $titleItems = ArrayHelper::map(ClnTitle::find()->all(),'TITLE_GEN_NO','TITLE_NAME') ;
-        $cardItems = Yii::$app->utilsHelper->getCardTypeLov();
 
         return $this->render('index', [
-            'searchModel' => $searchModel ,
-            'dataProvider' => $dataProvider ,
-            'titleItems' => $titleItems ,
-            'cardItems' => $cardItems ,
+            'searchModel' => $searchModel,
+            'dataProvider' => $dataProvider,
         ]);
     }
 
@@ -82,16 +61,13 @@ class ClnregisterController extends Controller
     public function actionCreate()
     {
         $model = new ClnRegister();
-        $titleItems=ArrayHelper::map(ClnTitle::find()->all(),'TITLE_GEN_NO','TITLE_NAME') ;       
-        $cardItems = Yii::$app->utilsHelper->getCardTypeLov();
-        
+
         if ($model->load(Yii::$app->request->post()) && $model->save()) {
             return $this->redirect(['view', 'id' => $model->REGISTER_GEN_NO]);
-        } else {                             
-            return $this->render('create',  [   'model' => $model ,
-                                                'titleItems' => $titleItems ,
-                                                'cardItems' => $cardItems ,
-                                            ]);
+        } else {
+            return $this->render('create', [
+                'model' => $model,
+            ]);
         }
     }
 
@@ -127,22 +103,6 @@ class ClnregisterController extends Controller
         return $this->redirect(['index']);
     }
 
-    
-    public function actionSelectregister()
-    {  
-        $searchModel = new ClnRegisterSearch();
-        $dataProvider = $searchModel->search(Yii::$app->request->queryParams);
-        
-        $titleItems = ArrayHelper::map(ClnTitle::find()->all(),'TITLE_GEN_NO','TITLE_NAME') ;
-        $cardItems = Yii::$app->utilsHelper->getCardTypeLov();
-
-        return $this->renderAjax('selectregis', [
-            'searchModel' => $searchModel ,
-            'dataProvider' => $dataProvider ,
-            'titleItems' => $titleItems ,
-            'cardItems' => $cardItems ,
-        ]);
-    }    
     /**
      * Finds the ClnRegister model based on its primary key value.
      * If the model is not found, a 404 HTTP exception will be thrown.

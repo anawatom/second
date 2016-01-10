@@ -8,12 +8,11 @@ use app\models\ClnCureSearch;
 use yii\web\Controller;
 use yii\web\NotFoundHttpException;
 use yii\filters\VerbFilter;
-use yii\helpers\Json;
-use yii\web\JsonParser;
+
 /**
  * ClnCureController implements the CRUD actions for ClnCure model.
  */
-class ClncureController extends Controller
+class ClnCureController extends Controller
 {
     public function behaviors()
     {
@@ -66,7 +65,7 @@ class ClncureController extends Controller
         if ($model->load(Yii::$app->request->post()) && $model->save()) {
             return $this->redirect(['view', 'id' => $model->CURE_GEN_NO]);
         } else {
-            return $this->renderAjax('create', [
+            return $this->render('create', [
                 'model' => $model,
             ]);
         }
@@ -119,12 +118,4 @@ class ClncureController extends Controller
             throw new NotFoundHttpException('The requested page does not exist.');
         }
     }
-    
-    
-    public function actionGetCureExpense()
-    {
-       $modelClnCure = ClnCure::findOne($_POST['CURE_GEN_NO']) ;      
-       $result['CURE_EXPENSES'] =   number_format($modelClnCure->CURE_EXPENSES, 2, '.', '');
-       echo Json::encode($result) ;
-    }    
 }

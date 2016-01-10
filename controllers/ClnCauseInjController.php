@@ -12,7 +12,7 @@ use yii\filters\VerbFilter;
 /**
  * ClnCauseInjController implements the CRUD actions for ClnCauseInj model.
  */
-class ClncauseinjController extends Controller
+class ClnCauseInjController extends Controller
 {
     public function behaviors()
     {

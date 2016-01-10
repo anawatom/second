@@ -39,32 +39,32 @@ use yii\helpers\Html;
                 <ul class="treeview-menu">
                     <li>
                         <?= Html::a('CLN0I010 บันทึกชนิดกีฬา',
-                                    ['clnsport'],
+                                    ['/cln-sport'],
                                     []); ?>
                     </li>
                     <li>
                         <?= Html::a('CLN0I020 บันทึกบริเวณที่บาดเจ็บ',
-                                    ['clnboundaryinj'],
+                                    ['/cln-boundary-inj'],
                                     []); ?>
                     </li>
                     <li>
                         <?= Html::a('CLN0I030 บันทึกสาเหตุการบาดเจ็บ',
-                                    ['clncauseinj'],
+                                    ['/cln-cause-inj'],
                                     []); ?>
                     </li>
                     <li>
                         <?= Html::a('CLN0I040 บันทึกวิธีการรักษา',
-                                    '#',
+                                    ['/cln-cure'],
                                     []); ?>
                     </li>
                     <li>
                         <?= Html::a('CLN0I050 บันทึกคำนำหน้านาม',
-                                    '#',
+                                    ['/cln-title'],
                                     []); ?>
                     </li>
                     <li>
                         <?= Html::a('CLN0I060 บันทึกเวลามาตรฐานการให้บริการ',
-                                    '#',
+                                    ['/cln-standard-time'],
                                     []); ?>
                     </li>
                 </ul>
@@ -77,17 +77,17 @@ use yii\helpers\Html;
                 <ul class="treeview-menu">
                     <li>
                         <?= Html::a('CLN1I010 บันทึกระเบียนผู้ป่วย',
-                                    ['clnsport'],
+                                    ['/cln-register'],
                                     []); ?>
                     </li>
                     <li>
                         <?= Html::a('CLN1I020 บันทึกการบาดเจ็บ',
-                                    ['clnsport'],
+                                    ['/cln-diagnose'],
                                     []); ?>
                     </li>
                     <li>
                         <?= Html::a('CLN1I030 บันทึกกิจกรรมย่อย',
-                                    ['clnsport'],
+                                    ['/cln-sub-activity'],
                                     []); ?>
                     </li>
                 </ul>
@@ -100,37 +100,37 @@ use yii\helpers\Html;
                 <ul class="treeview-menu">
                     <li>
                         <?= Html::a('CLN1R010 รายงานเวชระเบียนคนไข้',
-                                    '#',
+                                    ['/report-cln1r010'],
                                     []); ?>
                     </li>
                     <li>
                         <?= Html::a('CLN1R020 รายงานผู้ใช้บริการและระยะเวลาให้บริการ',
-                                    '#',
+                                    ['/report-cln1r020'],
                                     []); ?>
                     </li>
                     <li>
                         <?= Html::a('CLN1R030 รายงานประจำเดือน',
-                                    '#',
+                                    ['/report-cln1r030'],
                                     []); ?>
                     </li>
                     <li>
                         <?= Html::a('CLN1R040 รายงานกราฟต่างๆ',
-                                    '#',
+                                    ['/report-cln1r040'],
                                     []); ?>
                     </li>
                     <li>
                         <?= Html::a('CLN1R050 พิมพ์รายงานสรุปจำนวนผู้ใช้บริการเปรียบเทียบเวลามาตรฐาน',
-                                    '#',
+                                    ['/report-cln1r050'],
                                     []); ?>
                     </li>
                     <li>
                         <?= Html::a('CLN1R060 รายงานประวัติการได้รับบาดเจ็บ/แพ้ยา',
-                                    '#',
+                                    ['/report-cln1r060'],
                                     []); ?>
                     </li>
                     <li>
                         <?= Html::a('CLN1R070 รายงานทะเบียนประวัติคนไข้',
-                                    '#',
+                                    ['/report-cln1r070'],
                                     []); ?>
                     </li>
                 </ul>
