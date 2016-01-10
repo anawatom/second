@@ -78,6 +78,7 @@ class DefaultController extends Controller
         }
 
         // render
+        $this->layout = '@app/views/layouts/main-login';
         return $this->render('login', [
             'model' => $model,
         ]);
