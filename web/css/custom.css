@@ -11,5 +11,8 @@
 .sidebar-menu, .main-sidebar .user-panel, .sidebar-menu>li.header {
     white-space: normal;
 }
+.navbar-nav > .user-menu > .dropdown-menu > li.user-header {
+	height: 100%;
+}
 /*
 --- */
