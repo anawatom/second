@@ -7,6 +7,7 @@ $config = [
     'id' => 'basic',
     'name' => 'คลินิกการกีฬา',
     'basePath' => dirname(__DIR__),
+    'language' => 'th',
     'bootstrap' => ['log'],
     'components' => [
         'utilsHelper' => [
