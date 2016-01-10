@@ -1,9 +1,10 @@
 <?php
 use yii\helpers\Url;
 use yii\helpers\Html;
+
+$currentController = Yii::$app->controller->id;
 ?>
 <aside class="main-sidebar">
-
     <section class="sidebar">
 
         <!-- Sidebar user panel -->
@@ -31,104 +32,117 @@ use yii\helpers\Html;
 
         <!-- Sidebar Menu -->
         <ul class="sidebar-menu">
-            <li class="treeview">
+            <li class="treeview <?= ($currentController == 'cln-sport'
+                                    || $currentController == 'cln-boundary-inj'
+                                    || $currentController == 'cln-cause-inj'
+                                    || $currentController == 'cln-cure'
+                                    || $currentController == 'cln-title'
+                                    || $currentController == 'cln-standard-time')? 'active':''; ?>">
                 <a href="#">
                     <span>ตารางรหัส</span>
                     <i class="fa fa-angle-left pull-right"></i>
                 </a>
                 <ul class="treeview-menu">
-                    <li>
+                    <li class="<?= ($currentController == 'cln-sport')? 'active': ''; ?>">
                         <?= Html::a('CLN0I010 บันทึกชนิดกีฬา',
                                     ['/cln-sport'],
                                     []); ?>
                     </li>
-                    <li>
+                    <li class="<?= ($currentController == 'cln-boundary-inj')? 'active': ''; ?>">
                         <?= Html::a('CLN0I020 บันทึกบริเวณที่บาดเจ็บ',
                                     ['/cln-boundary-inj'],
                                     []); ?>
                     </li>
-                    <li>
+                    <li class="<?= ($currentController == 'cln-cause-inj')? 'active': ''; ?>">
                         <?= Html::a('CLN0I030 บันทึกสาเหตุการบาดเจ็บ',
                                     ['/cln-cause-inj'],
                                     []); ?>
                     </li>
-                    <li>
+                    <li class="<?= ($currentController == 'cln-cure')? 'active': ''; ?>">
                         <?= Html::a('CLN0I040 บันทึกวิธีการรักษา',
                                     ['/cln-cure'],
                                     []); ?>
                     </li>
-                    <li>
+                    <li class="<?= ($currentController == 'cln-title')? 'active': ''; ?>">
                         <?= Html::a('CLN0I050 บันทึกคำนำหน้านาม',
                                     ['/cln-title'],
                                     []); ?>
                     </li>
-                    <li>
+                    <li class="<?= ($currentController == 'cln-standard-time')? 'active': ''; ?>">
                         <?= Html::a('CLN0I060 บันทึกเวลามาตรฐานการให้บริการ',
                                     ['/cln-standard-time'],
                                     []); ?>
                     </li>
                 </ul>
             </li>
-            <li class="treeview">
+            <li class="treeview <?= ($currentController == 'cln-register'
+                                    || $currentController == 'cln-diagnose'
+                                    || $currentController == 'cln-activity')? 'active':''; ?>">
                 <a href="#">
                     <span>บันทึก</span>
                     <i class="fa fa-angle-left pull-right"></i>
                 </a>
                 <ul class="treeview-menu">
-                    <li>
+                    <li class="<?= ($currentController == 'cln-register')? 'active': ''; ?>">
                         <?= Html::a('CLN1I010 บันทึกระเบียนผู้ป่วย',
                                     ['/cln-register'],
                                     []); ?>
                     </li>
-                    <li>
+                    <li class="<?= ($currentController == 'cln-diagnose')? 'active': ''; ?>">
                         <?= Html::a('CLN1I020 บันทึกการบาดเจ็บ',
                                     ['/cln-diagnose'],
                                     []); ?>
                     </li>
-                    <li>
+                    <li class="<?= ($currentController == 'cln-activity')? 'active': ''; ?>">
                         <?= Html::a('CLN1I030 บันทึกกิจกรรมย่อย',
                                     ['/cln-sub-activity'],
                                     []); ?>
                     </li>
                 </ul>
             </li>
-            <li class="treeview">
+            <li class="treeview <?= ($currentController == 'report-cln1r010'
+                                    || $currentController == 'report-cln1r020'
+                                    || $currentController == 'report-cln1r030'
+                                    || $currentController == 'report-cln1r040'
+                                    || $currentController == 'report-cln1r050'
+                                    || $currentController == 'report-cln1r060'
+                                    || $currentController == 'report-cln1r070')? 'active':''; ?>">
                 <a href="#">
                     <span>รายงาน</span>
                     <i class="fa fa-angle-left pull-right"></i>
                 </a>
                 <ul class="treeview-menu">
-                    <li>
+                    <li class="<?= ($currentController == 'report-cln1r010')? 'active': ''; ?>">
                         <?= Html::a('CLN1R010 รายงานเวชระเบียนคนไข้',
                                     ['/report-cln1r010'],
                                     []); ?>
                     </li>
-                    <li>
+                    <li class="<?= ($currentController == 'report-cln1r020')? 'active': ''; ?>">
                         <?= Html::a('CLN1R020 รายงานผู้ใช้บริการและระยะเวลาให้บริการ',
                                     ['/report-cln1r020'],
                                     []); ?>
                     </li>
-                    <li>
+                    <li class="<?= ($currentController == 'report-cln1r030')? 'active': ''; ?>">
                         <?= Html::a('CLN1R030 รายงานประจำเดือน',
                                     ['/report-cln1r030'],
                                     []); ?>
                     </li>
-                    <li>
+                    <li class="<?= ($currentController == 'report-cln1r040')? 'active': ''; ?>">
                         <?= Html::a('CLN1R040 รายงานกราฟต่างๆ',
                                     ['/report-cln1r040'],
                                     []); ?>
                     </li>
-                    <li>
+                    <li class="<?= ($currentController == 'report-cln1r050')? 'active': ''; ?>">
                         <?= Html::a('CLN1R050 พิมพ์รายงานสรุปจำนวนผู้ใช้บริการเปรียบเทียบเวลามาตรฐาน',
                                     ['/report-cln1r050'],
                                     []); ?>
                     </li>
-                    <li>
+                    <li class="<?= ($currentController == 'report-cln1r060')? 'active': ''; ?>">
                         <?= Html::a('CLN1R060 รายงานประวัติการได้รับบาดเจ็บ/แพ้ยา',
                                     ['/report-cln1r060'],
                                     []); ?>
                     </li>
-                    <li>
+                    <li class="<?= ($currentController == 'report-cln1r070')? 'active': ''; ?>">
                         <?= Html::a('CLN1R070 รายงานทะเบียนประวัติคนไข้',
                                     ['/report-cln1r070'],
                                     []); ?>
